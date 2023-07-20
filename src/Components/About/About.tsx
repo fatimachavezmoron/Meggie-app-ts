@@ -11,9 +11,9 @@ export const About: React.FC<AboutProps> = ({title, url, image}: AboutProps) => 
   return (
     <>
     <div className='aboutCont'>
-      <div>
-      <h1>ABOUT</h1>
-      </div>
+    <div className='titleStyle'>
+      <h1>About Page</h1>
+    </div>
       <div>
         <img src={image}
         alt='AboutImg'
