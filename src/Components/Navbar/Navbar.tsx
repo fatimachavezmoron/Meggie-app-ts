@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import './Navbar.scss'
+import { Link } from "react-router-dom";
 
 interface NavbarProps  {
   name: string;
@@ -9,34 +10,34 @@ interface NavbarProps  {
 
  export function  Navbar (props: NavbarProps): JSX.Element{
     const [name, setName] = useState<string>('');
-    const [name2, setName2] = useState<string>('');
 
     useEffect (() =>{
       setName(props.name);
     }, [props.name])
-
-    useEffect (() =>{
-      setName2(props.name2);
-    }, [props.name2])
 
   return (
     <>
     <nav id='nav-bar'>
       <ul className="nav-link">
         <li>
-        {name}
+          <Link to={`${process.env.PUBLIC_URL}/`} className='Link'>
+          {name}
+          </Link>
         </li>
         <li>
-         {name2}
+          <Link to={`${process.env.PUBLIC_URL}/about`} className='Link'>
+          {props.name2}
+          </Link>
         </li>
         <li> 
-         {props.name3}
+          <Link to={`${process.env.PUBLIC_URL}/contact`} className='Link'>
+          {(props.name3!== undefined) ? props.name3 : null}
+          </Link>
         </li>
       </ul>
     <button
     onClick={() =>{
       setName('NEW NAME')
-      setName2('NEW NAME 2')
     }}
     >
       Change Name

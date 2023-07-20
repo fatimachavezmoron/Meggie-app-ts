@@ -1,14 +1,30 @@
 import React from 'react';
 import './App.css';
-import { Navbar } from './Components/Navbar';
+import { Navbar } from './Components/Navbar/Navbar';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from './Components/Home/Home';
+import {About} from './Components/About/About';
+import Contact from './Components/Contact/Contact';
 
 
 function App() {
   return (
     <>
+    <Router>
     <div className='miAppDiv'>
     <Navbar name=' Home ' name2= ' About us'  name3= ' Contact '/> 
     </div>
+    <Routes>
+      <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
+      <Route path={`${process.env.PUBLIC_URL}/about`} 
+              element={<About 
+              title={'Ruby Rose'}
+              url={'https://en.wikipedia.org/wiki/Ruby_Rose'}
+              image={'https://imagenes.20minutos.es/files/image_990_v3/uploads/imagenes/2018/08/07/ruby_rose.jpg'}
+              />}/>
+      <Route path={`${process.env.PUBLIC_URL}/contact`} element={<Contact />}/>
+    </Routes>
+    </Router>
     </>
   );
 }

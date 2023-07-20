@@ -17,12 +17,33 @@
     font-weight: 500;
     color: white;
     cursor: pointer;
+  .Link{
+      text-decoration: none;
+      color:#fff;
+    }
+  .Link:active{
+    color: #ff7300;
+  }
+  .Link:hover{
+    color: #ff7300;
+  }
   }
   button {
     background-color: #383838;
     border-radius: 20px;
     border: 2px solid white;
     color: white;
+    padding: 7px 20px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  button:hover {
+    transform: scale(1.05);
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid #646464;
+    color: #383838;
     padding: 7px 20px;
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
