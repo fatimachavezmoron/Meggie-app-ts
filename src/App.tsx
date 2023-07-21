@@ -4,7 +4,7 @@ import { Navbar } from './Components/Navbar/Navbar';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './Components/Home/Home';
 import {About} from './Components/About/About';
-import Contact from './Components/Contact/Contact';
+import {Contact} from './Components/Contact/Contact';
 
 
 function App() {
@@ -22,7 +22,13 @@ function App() {
               url={'https://en.wikipedia.org/wiki/Ruby_Rose'}
               image={'https://imagenes.20minutos.es/files/image_990_v3/uploads/imagenes/2018/08/07/ruby_rose.jpg'}
               />}/>
-      <Route path={`${process.env.PUBLIC_URL}/contact`} element={<Contact />}/>
+      <Route path={`${process.env.PUBLIC_URL}/contact`} 
+              element={<Contact 
+              title={'Contact Us'}
+              subtitle={'meggieTheBest@gmail.com'}
+              url={'https://myaccount.google.com/'}
+              image={'https://wearetribu.com/wp-content/uploads/2016/12/140115_minimalist.jpg'}
+              />}/>
     </Routes>
     </Router>
     </>
