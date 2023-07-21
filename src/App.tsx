@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
 import { Navbar } from './Components/Navbar/Navbar';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -8,6 +8,9 @@ import {Contact} from './Components/Contact/Contact';
 
 
 function App() {
+  useEffect(()=>{
+    document.title = 'Meggie - page with Typescript'
+  })
   return (
     <>
     <Router>
@@ -28,6 +31,7 @@ function App() {
               subtitle={'meggieTheBest@gmail.com'}
               url={'https://myaccount.google.com/'}
               image={'https://wearetribu.com/wp-content/uploads/2016/12/140115_minimalist.jpg'}
+              rightArrow={true}
               />}/>
     </Routes>
     </Router>

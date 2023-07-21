@@ -12,4 +12,27 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  .contactTitle {
+    text-decoration: none;
+    color: black;
+    margin-top: 30px;
+  }
+  .contactTitle:hover {
+    text-decoration: none;
+    color: #ff7300;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+  .arrowCont {
+    display: flex;
+    align-items: center;
+  }
+  .arrowImg {
+    width: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  .arrowImg:hover {
+    transform: scale(1.5);
+  }
 }
