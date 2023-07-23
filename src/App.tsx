@@ -9,7 +9,7 @@ import {Contact} from './Components/Contact/Contact';
 
 function App() {
   useEffect(()=>{
-    document.title = 'Meggie - page with Typescript'
+    document.title = 'Meggie'
   })
   return (
     <>
