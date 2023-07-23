@@ -1,5 +1,4 @@
-import { doesNotMatch } from 'assert';
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
 import './Home.scss'
 
 type FormElement = React.FormEvent<HTMLFormElement>
@@ -11,12 +10,14 @@ interface TasksProps {
 const Home = () => {
 
   const [newTask, setNewTask] = useState<string>('');
-  const [tasks, setTasks] =  useState<TasksProps[]>([])
+  const [tasks, setTasks] =  useState<TasksProps[]>([]);
+  const taskInput = useRef<HTMLInputElement>(null);
 
   const handleSubmit = (e: FormElement) => {
     e.preventDefault();
     addTask(newTask);
-    setNewTask('')
+    setNewTask('');
+    taskInput.current?.focus();
   };
 
   const addTask = (name: string) => {
@@ -41,7 +42,13 @@ const Home = () => {
       <div className='rowclass'>
         <div >
             <form onSubmit={handleSubmit} className='colClass'>
-              <input type='text' onChange={e => setNewTask(e.target.value)} value={newTask} className='inputStyle'/>
+              <input type='text' 
+              onChange={e => setNewTask(e.target.value)} 
+              value={newTask} 
+              className='inputStyle'
+              ref={taskInput}
+              autoFocus
+              />
               <button className='btnHome'>
                 Save
               </button>
