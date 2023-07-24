@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700&family=Vollkorn:wght@400;500;600;700&display=swap');
+
+#nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: rgb(14, 14, 14);
+  padding-right: 20px;
+  .nav-link {
+    display: flex;
+    list-style: none;
+    margin-right:10px;
+  }
+  .nav-link > li{
+    margin-right:30px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+  .Link{
+      text-decoration: none;
+      color:#fff;
+    }
+  .Link:active{
+    color: #ff7300;
+  }
+  .Link:hover{
+    color: #ff7300;
+  }
+  }
+  button {
+    background-color: #383838;
+    border-radius: 20px;
+    border: 2px solid white;
+    color: white;
+    padding: 7px 20px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  button:hover {
+    transform: scale(1.05);
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid #646464;
+    color: #383838;
+    padding: 7px 20px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+  }
+}
