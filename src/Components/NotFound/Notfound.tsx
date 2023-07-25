@@ -1,6 +1,8 @@
 import React from 'react'
 
-function Notfound() {
+type Props = {}
+
+const Notfound = (props: Props) => {
   return (
     <div>Notfound</div>
   )
