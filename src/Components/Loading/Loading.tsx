@@ -1,6 +1,8 @@
 import React from 'react'
 
-function Loading() {
+type Props = {}
+
+const Loading = (props: Props) => {
   return (
     <div>Loading</div>
   )

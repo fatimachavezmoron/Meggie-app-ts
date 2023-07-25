@@ -1,6 +1,8 @@
 import React from 'react'
 
-function Paginado() {
+type Props = {}
+
+const Paginado = (props: Props) => {
   return (
     <div>Paginado</div>
   )

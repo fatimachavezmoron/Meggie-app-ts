@@ -1,6 +1,8 @@
 import React from 'react'
 
-function Autocomplete() {
+type Props = {}
+
+const Autocomplete = (props: Props) => {
   return (
     <div>Autocomplete</div>
   )
