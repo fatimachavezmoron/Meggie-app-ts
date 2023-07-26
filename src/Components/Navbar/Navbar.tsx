@@ -6,6 +6,7 @@ interface NavbarProps  {
   name: string;
   name2: string;
   name3?: string;
+  name4: string;
 }
 
  export function  Navbar (props: NavbarProps): JSX.Element{
@@ -32,6 +33,11 @@ interface NavbarProps  {
         <li> 
           <Link to={`${process.env.PUBLIC_URL}/contact`} className='Link'>
           {(props.name3!== undefined) ? props.name3 : null}
+          </Link>
+        </li>
+        <li> 
+        <Link to={`${process.env.PUBLIC_URL}/team`} className='Link'>
+          {props.name4}
           </Link>
         </li>
       </ul>
