@@ -12,6 +12,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 150px;
   .contactTitle {
     text-decoration: none;
     color: black;
@@ -19,7 +20,7 @@
   }
   .contactTitle:hover {
     text-decoration: none;
-    color: #ff7300;
+    color: #055eb1;
     font-weight: 600;
     margin-top: 30px;
   }
@@ -27,12 +28,13 @@
     display: flex;
     align-items: center;
   }
-  .arrowImg {
-    width: 20px;
+  .Chevron-icon {
+    color: #055eb1;
     cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+    font-size: 16px;
+    margin-left: 8px;
   }
-  .arrowImg:hover {
+  .Chevron-icon:hover {
     transform: scale(1.5);
   }
 }

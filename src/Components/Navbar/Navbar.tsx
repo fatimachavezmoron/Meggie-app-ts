@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import './Navbar.scss'
 import { Link } from "react-router-dom";
+import letterM from '../../assets/images/letterM.jpeg'
 
 interface NavbarProps  {
   name: string;
   name2: string;
   name3?: string;
+  name4: string;
+  name5: string;
 }
 
  export function  Navbar (props: NavbarProps): JSX.Element{
@@ -18,6 +21,7 @@ interface NavbarProps  {
   return (
     <>
     <nav id='nav-bar'>
+    <img src={letterM} alt='logoIMG' className='logoNavImg'/>
       <ul className="nav-link">
         <li>
           <Link to={`${process.env.PUBLIC_URL}/`} className='Link'>
@@ -34,14 +38,25 @@ interface NavbarProps  {
           {(props.name3!== undefined) ? props.name3 : null}
           </Link>
         </li>
-      </ul>
-    <button
+        <li> 
+          <Link to={`${process.env.PUBLIC_URL}/login`} className='Link'>
+          {props.name4}
+          </Link>
+         </li>
+        <li> 
+          <Link to={`${process.env.PUBLIC_URL}/team`} className='Link'>
+          {props.name5}
+          </Link>
+        </li>
+       
+        <button
     onClick={() =>{
       setName('NEW NAME')
     }}
     >
       Change Name
     </button>
+      </ul>
     </nav>
     </>
 
