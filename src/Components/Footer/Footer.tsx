@@ -2,6 +2,7 @@ import React from 'react';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import './Footer.scss'
 
+
 const getCurrentYear = () => {
   return new Date().getFullYear();
 };

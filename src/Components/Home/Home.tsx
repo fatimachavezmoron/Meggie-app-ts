@@ -1,5 +1,6 @@
 import React, {useState, useRef} from 'react'
 import './Home.scss'
+import letterM from '../../assets/images/letterM.jpeg'
 
 type FormElement = React.FormEvent<HTMLFormElement>
 interface TasksProps {
@@ -40,6 +41,7 @@ const Home = () => {
     <>
     <div className='Container'>
       <div className='rowclass'>
+        <img src={letterM} alt='logoIMG' className='logoImg'/>
         <div >
             <form onSubmit={handleSubmit} className='colClass'>
               <input type='text' 
