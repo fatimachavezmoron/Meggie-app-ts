@@ -1,6 +1,6 @@
 import React from 'react'
 import './Contact.scss'
-
+import { FaChevronRight } from 'react-icons/fa';
 
 interface ContactProps {
   title: string;
@@ -35,12 +35,7 @@ export  const Contact: React.FC<ContactProps> = ({title, subtitle, url, image, r
           <div className='arrowCont'>
             <p>{subtitle}</p>
             {(rightArrow === true) &&  
-            <img alt='arrowImg' 
-            color='#ff7300' 
-            className='arrowImg' 
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAXJJREFUaEPtlzFOw0AQRd8qp4FDIK6QijSkIbQIYTfQQ0OMaClAFJAGDoG4A9wGBhkZyZDIyWpnFq00br07O+//GXs2UPgTCs8fB/hvB90BdyBRAS+hRAGTt7sDyRImBnAHVgkoNbthzkuiuBttV3dAai4RKoRZuOJuoywSFqkCSM0pwkWXj+SAUAOQY7YY8b4kZmAW5twmiDy4VQ2gPUVqDhFu4NeUK8B+aHi0gFAF+IY4YUrg/g/EJzC1gFAHyA1hApATwgyg64kJwmJFOe2FhmeNnjAFGID4ACYaEOYA1hBZAHoQD8CoVzrJTuQEGCM8FQkgNW0zq6vfOmnuQJe82ZfIFGAgebW/shlArpHCBCBX8iY9kDN5dYCix2mp2AbeluYb4cDyaqnaA1JxBpwXeaX8UV4qroGjHPdh9R7oQeyEhleNcXldDNUSWneYxXsHsFA1JqY7EKOWxVp3wELVmJjuQIxaFmvdAQtVY2IW78AXIbuBMfUWvnUAAAAASUVORK5CYII="
-            onClick={handleArrowClick}
-            /> 
+            <FaChevronRight className="Chevron-icon" onClick={()=> handleArrowClick}/>
             }  
           </div>
       </div>

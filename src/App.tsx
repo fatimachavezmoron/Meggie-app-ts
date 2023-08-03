@@ -5,8 +5,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './Components/Home/Home';
 import {About} from './Components/About/About';
 import {Contact} from './Components/Contact/Contact';
+import {LoginButton} from './pages/LoginPage';
+import {LogoutButton} from './pages/LogoutPage';
 import Footer from './Components/Footer/Footer';
-import Team from './Components/Team/Team'
+import Team from './Components/Team/Team';
+import {Profile} from './pages/Profile';
+
+
 function App() {
   useEffect(()=>{
     document.title = 'Meggie'
@@ -15,7 +20,8 @@ function App() {
     <>
     <Router>
     <div className='miAppDiv'>
-    <Navbar name=' Home ' name2= ' About us'  name3= ' Contact ' name4= 'Team'/> 
+    <Navbar name=' Home ' name2= ' About us'  name3= ' Contact ' name4= ' Log In ' name5= ' Team '/>
+    <Profile /> 
     </div>
     <Routes>
       <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
@@ -33,15 +39,22 @@ function App() {
               image={'https://wearetribu.com/wp-content/uploads/2016/12/140115_minimalist.jpg'}
               rightArrow={true}
               />}/>
-            <Route path={`${process.env.PUBLIC_URL}/team`} 
-              element={<Team
-              />}/>
+      <Route path={`${process.env.PUBLIC_URL}/login`} 
+             element={
+             <div className='btnCont'>
+             <LoginButton
+              title={'>> 👇 <<'}
+             />
+              <LogoutButton />
+            </div>
+             } />
+      <Route path={`${process.env.PUBLIC_URL}/team`} element={<Team />} />
     </Routes>
+    <Footer />
     </Router>
-    { <Footer />}
-
     </>
   );
 }
 
 export default App;
+
